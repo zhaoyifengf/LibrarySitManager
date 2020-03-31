@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    tools:context=".activity.MainActivity">
+
+    <!--<Button
+        android:text="退出登陆"
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="#E02D2F"/>
+    <fragment
+        android:id="@+id/room_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bg_gray">
+
+        <TextView
+            android:id="@+id/txt_topbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="信息"
+            android:textColor="@color/text_topbar"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/tp_top_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/scan"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/div_white" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_book"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_book"
+            android:text="@string/seat_book" />
+
+        <RadioButton
+            android:id="@+id/rb_scan"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_scan"
+            android:text="@string/scan" />
+
+        <RadioButton
+            android:id="@+id/rb_history"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_history"
+            android:text="@string/book_history" />
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_me"
+            android:text="@string/me"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/div_white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/frag_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:layout_below="@id/ly_top_bar"/>
+
+
+</RelativeLayout>

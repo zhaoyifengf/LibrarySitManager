@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--无效状态 灰色背景 圆角矩形-->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"></corners>
+            <solid android:color="#666666"></solid>
+        </shape>
+    </item>
+    <!--正常状态 蓝色背景 圆角矩形-->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"></corners>
+            <solid android:color="#00BFFF"></solid>
+        </shape>
+    </item>
+</selector>
